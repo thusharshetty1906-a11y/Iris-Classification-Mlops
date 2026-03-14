@@ -35,6 +35,9 @@ mlflow.log_metric("accuracy", accuracy)
 # Log model
 mlflow.sklearn.log_model(model, "iris_model")
 
+import os
+os.makedirs("models", exist_ok=True)
+
 # Save model
 joblib.dump(model, "models/iris_model.pkl")
 
